@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Exercise3_2 {
+
+	public static void main(String[] args) {
+		String simvol;
+		int index=0;
+		char letter;
+		letter=97;
+		/*Scanner in = new Scanner(System.in);
+		System.out.println("¬ведите букву на латинице: ");
+		simvol = in.nextLine();
+		letter=simvol.charAt(0);
+		for(char i=65;i<=90;i++) {
+			letter=i;
+		}*/
+		System.out.println(letter);
+	}
+
+}

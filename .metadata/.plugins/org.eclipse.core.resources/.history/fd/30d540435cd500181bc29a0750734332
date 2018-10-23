@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+/*) Ќаписать программу, котора€ переворачивает (реверсирует) 
+ * семизначное число N (к примеру, число 1234567 реверсируетс€ 
+ * в число 7654321).*/
+public class Exercise6 {
+
+	public static void main(String[] args) {
+		int chislo,counter, delitel=1, i=0;
+		int memory[] = new int [7];
+		Scanner in = new Scanner(System.in);
+		System.out.println("¬ведите семизначное число:");
+		chislo = in.nextInt();
+		while(chislo!=0) {
+			if(delitel==1000000) {
+				memory[i]=(chislo/delitel);
+				break;
+				}
+			memory[i]=(chislo/delitel)%10;
+			i++;
+			delitel=delitel*10;
+		}
+for(int j=0;j<memory.length;i++) {
+	System.out.print(memory[i]+" ");
+}
+	}
+
+}

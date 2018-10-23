@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+/*Масса динозавра задаётся в килограммах. 
+ * Разработайте программу, которая вычисляет, сколько это миллиграмм, грамм и тонн.*/
+public class Exercise2 {
+
+	public static void main(String[] args) {
+		int veight;
+		double milliGrVeight, grVeight, tonnVeight;
+
+		Scanner in = new Scanner(System.in);
+		System.out.print("Введите массу динозавра в килограммах: ");
+		veight = in.nextInt();
+		milliGrVeight = veight * 1000_000;
+		grVeight = veight * 1000;
+		tonnVeight = (veight / 1000);
+		System.out.println("Масса динозавра в миллиграммах: " + milliGrVeight);
+		System.out.println("Масса динозавра в граммах: " + grVeight);
+		System.out.println("Масса динозавра в тоннах: %.2f" + tonnVeight);
+
+	}
+
+}
