@@ -1,0 +1,123 @@
+import java.util.Scanner;
+
+public class Exercise4 {
+
+	public static void main(String[] args) {
+		int day = 0, month = 0, year = 0, rateDay1 = 31, rateDay2 = 30, rateDayFeb = 28, rateDayFeb1 = 29, rateMonth;
+		Scanner in = new Scanner(System.in);
+		System.out.println("¬ведите день:");
+		day = in.nextInt();
+		System.out.println("¬ведите мес€ц:");
+		month = in.nextInt();
+		System.out.println("¬ведите год:");
+		year = in.nextInt();
+		if (year % 4 == 0 || year % 400 == 0) {
+			if (month % 2 == 0 && month < 8 && month > 2) {
+				for (int rate = 1; rate <= rateDay2; rate++) {
+					if (rate == day && day != rateDay2) {
+						day++;
+						break;
+					} else {
+						day = 1;
+						if (month != 12) {
+							month++;
+						} else {
+							month = 1;
+						}
+						year++;
+					}
+				}
+			} else if (month == 2) {
+				for (int rate = 1; rate <= rateDayFeb1; rate++) {
+					if (rate == day && day != rateDayFeb1) {
+						day++;
+						break;
+					} else {
+						day = 1;
+						if (month != 12) {
+							month++;
+						} else {
+							month = 1;
+						}
+						year++;
+					}
+
+				}
+			} else if (month == 1) {
+
+				for (int rate = 1; rate <= rateDay1; rate++) {
+					if (rate == day && day != rateDay1) {
+						day++;
+						break;
+					} else {
+						day = 1;
+						if (month != 12) {
+							month++;
+						} else {
+							month = 1;
+						}
+						year++;
+					}
+
+				}
+
+			}
+			if (month % 2 != 0 && month < 8 && month > 2) {
+				for (int rate = 1; rate <= rateDay1; rate++) {
+					if (rate == day && day != rateDay1) {
+						day++;
+						break;
+					} else {
+						day = 1;
+						if (month != 12) {
+							month++;
+						} else {
+							month = 1;
+						}
+						year++;
+					}
+				}
+			}
+		} 
+		if (year % 4 != 0 || year % 400 != 0 && year % 100 == 0) {
+			if (month % 2 == 0 && month >= 8 && month <= 12) {
+				for (int rate = 1; rate <= rateDay1; rate++) {
+					if (rate == day && day != rateDay1) {
+						day++;
+						break;
+					} else {
+						day = 1;
+						if (month != 12) {
+							month++;
+						} else {
+							month = 1;
+						}
+						year++;
+					}
+				}
+			} else if (month % 2 != 0 && month >= 8 && month <= 12) {
+				for (int rate = 1; rate <= rateDay2; rate++) {
+					if (rate == day && day != rateDay2) {
+						day++;
+						break;
+					} else {
+						day = 1;
+						if (month != 12) {
+							month++;
+						} else {
+							month = 1;
+						}
+						year++;
+					}
+
+				}
+			} 
+	
+		}
+		else {
+			System.out.println("¬ведена некорректна€ дата (мес€ц или день)!");
+		}
+
+	}
+
+}

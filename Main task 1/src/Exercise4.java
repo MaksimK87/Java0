@@ -17,7 +17,7 @@ public class Exercise4 {
 		b = (chislo / 100) % 10;
 		a = chislo / 1000;
 		if (a < b && b < c && c < d) {
-			System.out.println("Цифры введенного числа образуют " + "возрастающую последовательность");
+			System.out.println("Цифры введенного числа образуют возрастающую последовательность");
 
 		} else {
 			if (a == b && b == c && c == d) {
