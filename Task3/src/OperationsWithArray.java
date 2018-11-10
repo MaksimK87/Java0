@@ -83,9 +83,9 @@ public class OperationsWithArray {
 
 	}
 
-	static int findMidIndex(int maxElement, int minElement) {
+	static int findMidIndex(int maxIndex, int minIndex) {
 
-		return (maxElement + minElement) / 2;
+		return (minIndex + maxIndex) / 2;
 
 	}
 
